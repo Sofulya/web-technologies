@@ -1,24 +1,29 @@
+body {
+    margin:0;
+    padding: auto;
+    background-color: #000000;
+    }
     table {
     border-collapse:collapse; 
     font-size:12px;
-    border: 1px solid #313a59;
+    border: 1px solid #ce9ecc;
     margin-bottom:20px;}
     th {
-    font-family: 'Lobster', cursive;
+    font-family: 'Caveat', cursive;
     padding:10px; 
     font-size:16px;
-    color:#34495e;
-    border: 1px solid #2b3861;}
+    color:#ffffff;
+    border: 1px solid #ce9ecc}
     td {
     font-family: 'Ubuntu', sans-serif; 
     padding:5px 10px;
-    border: 1px dashed #313c61;
-    color:#34495e;}
+    border: 1px dashed #ce9ecc;
+    color:#ffffff;}
     caption {
     font-family: 'Lobster', cursive;
     font-size:24px;
     padding:10px; 
-    color:#833a1c;
+    color:#f8ac56;
      }
     .first {
     font-size:14px;
@@ -28,6 +33,6 @@
     .name {
     font-family: 'Lobster', cursive; 
     font-size:16px;
-    color:#6d311b; 
+    color:#ffffff; 
     text-align:center;
     }
