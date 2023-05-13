@@ -77,7 +77,7 @@
 .ex_5 {
     height: 300px;
     width: 500px;
-    background: url(img\1.jpg);
+    background: url(../img/1.jpg);
 }
 .ex_5 table {
     margin-top: 20%;
@@ -201,7 +201,7 @@
     width: 700px;
     height: 200px;
     border: 1px solid black;
-    background-image: url(img\fon1.jpg), url(img\fon2.jpg);
+    background-image: url(../img/fon1.jpg), url(../img/fon2.jpg);
     background-position: left, right;
     background-size: 200px 200px, 200px 200px;
     background-repeat: no-repeat, no-repeat;
