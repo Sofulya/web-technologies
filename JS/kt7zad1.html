@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KT7</title>
+</head>
+<body>
+  <!-- Определите количество ЧАСОВ которые прошли 
+  с 1970 года до текущего момента времени.
+  Примечание: полученное значение округлите по правилам математики -->
+<script>
+    let now = new Date();
+    console.log(Math.round(now.getTime() / 1000 / 60 / 60));
+</script>
+
+<!-- Какое количество дней прошло с начала 2000 года до текущего момент времени?
+Примечание: полученное значение округлите по правилам математики -->
+<script>
+    var start = new Date('January 1, 2000 00:00:00');
+    var diff = now - start;
+    var days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    console.log(days);
+</script>
+
+<!-- Создайте новую дату, которая будет отличаться на 5 лет (+) от текущий даты. -->
+<script>
+    var future = new Date(now.getFullYear() + 5, now.getMonth(), now.getDate(), now.getHours(), now.getMinutes(), now.getSeconds());
+    console.log(future);
+</script>
+
+<!-- Напишите функцию checkDate(date), которая получает дату и  проверяет, является ли год в дате високосным. 
+Если да - функция должна вернуть true, в противном случае false
+Примечание: високосный год - это год который делится на 4 без остатка -->
+<script>
+    function checkDate(date) {
+        var year = date.getFullYear();
+        if (year % 4 === 0) {
+            return true;
+        } else {
+            return false;
+        }
+        }
+        var date = new Date('January 1, 2023 00:00:00');
+        console.log(checkDate(date));
+</script>
+
+<!-- Напишите функцию logDay(date), которая в качестве аргумента принимает даты и ВЫВОДИТ в консоль день недели даты по примеру:
+Если дата будет текущая - функция должна вывести сообщение:
+'Сегодня среда' -->
+<script>
+    function logDay(date) {
+    var days = ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'];
+    var dayOfWeek = days[date.getDay()];
+    if (date.toDateString() === new Date().toDateString()) {
+        console.log('Сегодня ' + dayOfWeek);
+    } else {
+        console.log(dayOfWeek);
+    }
+    }
+
+    var date = new Date('January 1, 2020 00:00:00');
+    logDay(date); // Среда
+
+    logDay(new Date()); // Сегодня среда
+</script>
+
+<!-- Напишите функцию endDay(), которая возвращает количество секунд до конца текущего дня. -->
+<script>
+    function endDay() {
+        var now = new Date();
+        var end = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 23, 59, 59);
+        var diff = (end.getTime() - now.getTime()) / 1000;
+        return diff;
+        }
+        console.log(endDay());
+</script>
+</body>
+</html>

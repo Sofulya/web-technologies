@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom</title>
+</head>
+<body>
+    <script>
+        function callback1(guestion, yes, no) {
+            if (confirm(guestion)) yes()
+            else no();  
+        }
+        function callbackYes(){
+            if (x <= -7) console.log(x**2)
+            else console.log(7 - x)
+        }
+        function callbackNo(){
+            alert('Вы отказались!!!');
+        }
+        x = prompt('Введите x')
+        callback1('Решить уравнение?', callbackYes, callbackNo);
+    </script>
+</body>
